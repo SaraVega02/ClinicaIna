@@ -1,0 +1,86 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 40px;
+  height: 5px;
+  background-color: #b30000;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  margin: 0 5px;
+  border-radius: 2px;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #ff0000;
+}
+
+
+h1, h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #b30000;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff !important;
+}
+
+.nav-link {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  color: #b30000;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.alert {
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: #b30000;
+}
