@@ -84,3 +84,17 @@ h1, h2 {
 footer {
   background-color: #b30000;
 }
+
+
+
+
+
+.invalid-feedback {
+  display: none;
+  color: red;
+}
+
+input:invalid + .invalid-feedback,
+select:invalid + .invalid-feedback {
+  display: block;
+}
