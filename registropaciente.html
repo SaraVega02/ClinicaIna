@@ -66,11 +66,6 @@
           </div>
 
           <div class="col-md-6">
-            <label for="edad" class="form-label">Edad: <span id="edadValor">0</span> años</label>
-            <input type="range" class="form-range" id="edad" min="1" max="120" value="0">
-          </div>
-
-          <div class="col-md-6">
             <label for="sexo" class="form-label">Sexo:</label>
             <select class="form-select" id="sexo" required>
               <option value="">Seleccione...</option>
@@ -81,28 +76,39 @@
           </div>
 
           <div class="col-md-6">
-            <label for="temperatura" class="form-label">Temperatura (°C): <span id="temperaturaValor">37</span></label>
-            <input type="range" class="form-range" id="temperatura" min="30" max="45" step="0.1" value="37">
+            <label for="edad" class="form-label">Edad:</label>
+            <input type="number" class="form-control" id="edad" min="1" max="120" value="37" required>
+            <div class="invalid-feedback">Edad debe ser mayor que 0.</div>
           </div>
-
+          
           <div class="col-md-6">
-            <label for="presionSistolica" class="form-label">Presión Sistólica: <span id="presionSistolicaValor">120</span> mmHg</label>
-            <input type="range" class="form-range" id="presionSistolica" min="50" max="200" value="120">
+            <label for="temperatura" class="form-label">Temperatura (°C):</label>
+            <input type="number" class="form-control" id="temperatura" step="0.1" min="30" max="45" value="37.0" required>
+            <div class="invalid-feedback">Temperatura debe estar entre 30°C y 45°C.</div>
           </div>
-
+          
           <div class="col-md-6">
-            <label for="presionDiastolica" class="form-label">Presión Diastólica: <span id="presionDiastolicaValor">80</span> mmHg</label>
-            <input type="range" class="form-range" id="presionDiastolica" min="30" max="150" value="80">
+            <label for="presionSistolica" class="form-label">Presión Sistólica (mmHg):</label>
+            <input type="number" class="form-control" id="presionSistolica" min="50" max="200" value="120" required>
+            <div class="invalid-feedback">Debe ser mayor que 0.</div>
           </div>
-
+          
           <div class="col-md-6">
-            <label for="pulsaciones" class="form-label">Pulsaciones por minuto: <span id="pulsacionesValor">70</span></label>
-            <input type="range" class="form-range" id="pulsaciones" min="30" max="200" value="70">
+            <label for="presionDiastolica" class="form-label">Presión Diastólica (mmHg):</label>
+            <input type="number" class="form-control" id="presionDiastolica" min="30" max="150" value="80" required>
+            <div class="invalid-feedback">Debe ser mayor que 0.</div>
           </div>
-
+          
           <div class="col-md-6">
-            <label for="oxigeno" class="form-label">Oxígeno en sangre (%): <span id="oxigenoValor">98</span>%</label>
-            <input type="range" class="form-range" id="oxigeno" min="60" max="100" value="98">
+            <label for="pulsaciones" class="form-label">Pulsaciones por minuto:</label>
+            <input type="number" class="form-control" id="pulsaciones" min="30" max="200" value="70" required>
+            <div class="invalid-feedback">Debe estar entre 30 y 200.</div>
+          </div>
+          
+          <div class="col-md-6">
+            <label for="oxigeno" class="form-label">Oxígeno en sangre (%):</label>
+            <input type="number" class="form-control" id="oxigeno" min="60" max="100" value="98" required>
+            <div class="invalid-feedback">Debe estar entre 60% y 100%.</div>
           </div>
 
           <div class="col-12">

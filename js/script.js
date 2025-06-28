@@ -10,14 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: "pulsaciones", span: "pulsacionesValor" },
     { id: "oxigeno", span: "oxigenoValor" }
   ];
-
-  // ACTUALIZA EL VALOR MOSTRADO
-  camposNumericos.forEach(({ id, span }) => {
-    const input = document.getElementById(id);
-    const output = document.getElementById(span);
-    output.textContent = input.value;
-    input.addEventListener("input", () => output.textContent = input.value);
-  });
 });
 
 // SE ENVÍA FORMULARIO
@@ -40,7 +32,7 @@ document.getElementById('formPaciente').addEventListener('submit', function (e) 
     }
   });
 
-  // VALIDACIONES DE RANGO
+  // OBTENER Y VALIDAR VALORES NUMÉRICOS
   const edad = parseInt(document.getElementById('edad').value);
   const temperatura = parseFloat(document.getElementById('temperatura').value);
   const sistolica = parseInt(document.getElementById('presionSistolica').value);
@@ -48,10 +40,24 @@ document.getElementById('formPaciente').addEventListener('submit', function (e) 
   const pulsaciones = parseInt(document.getElementById('pulsaciones').value);
   const oxigeno = parseInt(document.getElementById('oxigeno').value);
 
-  if (edad <= 0 || temperatura < 30 || temperatura > 45 || sistolica <= 0 || diastolica <= 0) {
-    alert("Ingrese los datos de manera correcta.");
-    valido = false;
+  // FUNCIÓN PARA VALIDAR CAMPOS Y MOSTRAR MENSAJE EN EL DOM
+  function validarCampo(id, condicion) {
+    const campo = document.getElementById(id);
+    if (!condicion) {
+      campo.classList.add("is-invalid");
+      valido = false;
+    } else {
+      campo.classList.remove("is-invalid");
+    }
   }
+
+  // APLICAR VALIDACIONES
+  validarCampo("edad", edad > 0);
+  validarCampo("temperatura", temperatura >= 30 && temperatura <= 45);
+  validarCampo("presionSistolica", sistolica > 0);
+  validarCampo("presionDiastolica", diastolica > 0);
+  validarCampo("pulsaciones", pulsaciones >= 30 && pulsaciones <= 200);
+  validarCampo("oxigeno", oxigeno >= 60 && oxigeno <= 100);
 
   if (!valido) return; // DETIENE LA EJECUCIÓN SI HAY ERRORES
 
@@ -82,7 +88,7 @@ document.getElementById('formPaciente').addEventListener('submit', function (e) 
   // CLASIFICACIÓN DE URGENCIA POR NÚMERO DE SÍNTOMAS
   let urgencia = "Leve";
   if (sintomas.length >= 6) urgencia = "Grave";
-  else if (sintomas.length >= 4) urgencia = "Moderado";
+  else if (sintomas.length >= 4) urgencia = "Moderada";
 
   // GUARDADO DE CLIENTE
   const paciente = {
