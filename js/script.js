@@ -80,9 +80,9 @@ document.getElementById('formPaciente').addEventListener('submit', function (e) 
   }
 
   // CLASIFICACIÓN DE URGENCIA POR NÚMERO DE SÍNTOMAS
-  let urgencia = "Verde";
-  if (sintomas.length >= 6) urgencia = "Rojo";
-  else if (sintomas.length >= 4) urgencia = "Amarillo";
+  let urgencia = "Leve";
+  if (sintomas.length >= 6) urgencia = "Grave";
+  else if (sintomas.length >= 4) urgencia = "Moderado";
 
   // GUARDADO DE CLIENTE
   const paciente = {
@@ -111,10 +111,10 @@ document.getElementById('formPaciente').addEventListener('submit', function (e) 
   modalHeader.className = "modal-header text-white";
   modalContent.className = "modal-content border";
 
-  if (urgencia === "Verde") {
+  if (urgencia === "Leve") {
     modalHeader.classList.add("bg-success");
     modalContent.classList.add("border-success");
-  } else if (urgencia === "Amarillo") {
+  } else if (urgencia === "Moderada") {
     modalHeader.classList.add("bg-warning");
     modalContent.classList.add("border-warning");
   } else {

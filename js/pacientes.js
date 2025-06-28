@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const filtro = document.getElementById("filtroUrgencia");
 
   // ARREGLO DE PACIENTES FIJOS PRECARGADOS
-  const pacientes = [
+  const pacientesFijos = [
     {
       nombre: "Ignacio",
       apellido: "Larraín",
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pulsaciones: 70,
       oxigeno: 97,
       sintomas: ["Dolor de cabeza"],
-      urgencia: "Verde"
+      urgencia: "Leve"
     },
     {
       nombre: "Sara",
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pulsaciones: 90,
       oxigeno: 91,
       sintomas: ["Fiebre", "Presión alta", "Fatiga", "Tos"],
-      urgencia: "Amarillo"
+      urgencia: "Moderada"
     },
     {
       nombre: "Adam",
@@ -47,9 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
       pulsaciones: 110,
       oxigeno: 85,
       sintomas: ["Fiebre", "Presión alta", "Fatiga", "Tos", "Dolor muscular", "Mareos"],
-      urgencia: "Rojo"
+      urgencia: "Grave"
     }
   ];
+
+  // PACIENTES DESDE LOCALSTORAGE
+  const pacientesGuardados = JSON.parse(localStorage.getItem("pacientes")) || [];
+
+  // UNIÓN DE AMBOS ARREGLOS
+  const pacientes = [...pacientesFijos, ...pacientesGuardados];
 
   // FUNCIÓN QUE MUESTRA LOS PACIENTES EN LA TABLA
   function renderPacientes(data) {
@@ -64,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // ASIGNA COLOR DE FILA SEGÚN URGENCIA
       let colorClass = "";
-      if (paciente.urgencia === "Rojo") {
+      if (paciente.urgencia === "Grave") {
         colorClass = "table-danger";
-      } else if (paciente.urgencia === "Amarillo") {
+      } else if (paciente.urgencia === "Moderada") {
         colorClass = "table-warning";
       } else {
         colorClass = "table-success";
