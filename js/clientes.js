@@ -5,27 +5,51 @@ document.addEventListener("DOMContentLoaded", function () {
   const buscador = document.getElementById("buscador");
   const filtro = document.getElementById("filtroUrgencia");
 
-  if (!localStorage.getItem("pacientes")) {
-    const demo = [
-      {
-        nombre: "Pedro",
-        apellido: "Pérez",
-        rut: "11.111.111-1",
-        edad: 35,
-        sexo: "Masculino",
-        temperatura: 37.5,
-        presionSistolica: 125,
-        presionDiastolica: 80,
-        pulsaciones: 70,
-        oxigeno: 97,
-        sintomas: ["Dolor de cabeza"],
-        urgencia: "Verde"
-      }
-    ];
-    localStorage.setItem("pacientes", JSON.stringify(demo));
-  }
-
-  let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+  // Pacientes fijos (sin guardar en localStorage)
+  const pacientes = [
+    {
+      nombre: "Ignacio",
+      apellido: "Larraín",
+      rut: "16.907.066-0",
+      edad: 37,
+      sexo: "Masculino",
+      temperatura: 37.5,
+      presionSistolica: 125,
+      presionDiastolica: 80,
+      pulsaciones: 70,
+      oxigeno: 97,
+      sintomas: ["Dolor de cabeza"],
+      urgencia: "Verde"
+    },
+    {
+      nombre: "Sara",
+      apellido: "Vega",
+      rut: "22.222.222-2",
+      edad: 60,
+      sexo: "Femenino",
+      temperatura: 38.2,
+      presionSistolica: 150,
+      presionDiastolica: 95,
+      pulsaciones: 90,
+      oxigeno: 91,
+      sintomas: ["Fiebre", "Presión alta", "Fatiga", "Tos"],
+      urgencia: "Amarillo"
+    },
+    {
+      nombre: "Adam",
+      apellido: "Rubilar",
+      rut: "33.333.333-3",
+      edad: 75,
+      sexo: "Masculino",
+      temperatura: 39.5,
+      presionSistolica: 160,
+      presionDiastolica: 100,
+      pulsaciones: 110,
+      oxigeno: 85,
+      sintomas: ["Fiebre", "Presión alta", "Fatiga", "Tos", "Dolor muscular", "Mareos"],
+      urgencia: "Rojo"
+    }
+  ];
 
   function renderPacientes(data) {
     tabla.innerHTML = "";
