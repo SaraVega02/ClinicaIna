@@ -66,7 +66,7 @@
           </div>
 
           <div class="col-md-6">
-            <label for="edad" class="form-label">Edad: <span id="edadVal">0</span> años</label>
+            <label for="edad" class="form-label">Edad: <span id="edadValor">0</span> años</label>
             <input type="range" class="form-range" id="edad" min="1" max="120" value="0">
           </div>
 
@@ -81,27 +81,27 @@
           </div>
 
           <div class="col-md-6">
-            <label for="temperatura" class="form-label">Temperatura (°C): <span id="tempVal">37</span></label>
+            <label for="temperatura" class="form-label">Temperatura (°C): <span id="temperaturaValor">37</span></label>
             <input type="range" class="form-range" id="temperatura" min="30" max="45" step="0.1" value="37">
           </div>
 
           <div class="col-md-6">
-            <label for="presionSistolica" class="form-label">Presión Sistólica: <span id="sisVal">120</span> mmHg</label>
+            <label for="presionSistolica" class="form-label">Presión Sistólica: <span id="presionSistolicaValor">120</span> mmHg</label>
             <input type="range" class="form-range" id="presionSistolica" min="50" max="200" value="120">
           </div>
 
           <div class="col-md-6">
-            <label for="presionDiastolica" class="form-label">Presión Diastólica: <span id="diaVal">80</span> mmHg</label>
+            <label for="presionDiastolica" class="form-label">Presión Diastólica: <span id="presionDiastolicaValor">80</span> mmHg</label>
             <input type="range" class="form-range" id="presionDiastolica" min="30" max="150" value="80">
           </div>
 
           <div class="col-md-6">
-            <label for="pulsaciones" class="form-label">Pulsaciones por minuto: <span id="pulVal">70</span></label>
+            <label for="pulsaciones" class="form-label">Pulsaciones por minuto: <span id="pulsacionesValor">70</span></label>
             <input type="range" class="form-range" id="pulsaciones" min="30" max="200" value="70">
           </div>
 
           <div class="col-md-6">
-            <label for="oxigeno" class="form-label">Oxígeno en sangre (%): <span id="oxiVal">98</span>%</label>
+            <label for="oxigeno" class="form-label">Oxígeno en sangre (%): <span id="oxigenoValor">98</span>%</label>
             <input type="range" class="form-range" id="oxigeno" min="60" max="100" value="98">
           </div>
 
@@ -164,36 +164,31 @@
     </div>
   </section>
 
-
-</section>
-    <!-- Footer -->
   <footer class="bg-danger text-white text-center py-4 mt-5 fixed-bottom">
     <p class="mb-0">&copy; 2025 Clínica INACAP. Todos los derechos reservados.</p>
-     <p class="mb-0"> Integrantes: Ignacio Larraín // Sara Vega</p>
+    <p class="mb-0">Integrantes: Ignacio Larraín // Sara Vega</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Modal de confirmación -->
-<div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border" id="modalContent">
-      <div class="modal-header text-white" id="modalHeader">
-        <h5 class="modal-title" id="modalConfirmacionLabel">Registro Exitoso</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body text-center">
-        ✅ Paciente registrado correctamente.<br>
-        Clasificación de urgencia: <strong id="urgenciaModal"></strong>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+  <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border" id="modalContent">
+        <div class="modal-header text-white" id="modalHeader">
+          <h5 class="modal-title" id="modalConfirmacionLabel">Registro Exitoso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          ✅ Paciente registrado correctamente.<br>
+          Clasificación de urgencia: <strong id="urgenciaModal"></strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
-<script src="js/script.js"></script>
+
 </html>
