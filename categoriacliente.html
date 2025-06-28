@@ -11,14 +11,12 @@
 </head>
 
 <body>
-    
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger px-4 fixed-top">
     <a class="navbar-brand" href="#">CLÍNICA INACAP</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
       aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse justify-content-end" id="navbarContenido">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -39,25 +37,55 @@
   </nav>
 
   <section class="container my-5 text-center pt-5">
-  <h2 class="mb-3">Bienvenido a la sección de Categorización Cliente</h2>
-  <p class="lead">
-    En esta sección podrás clasificar a los pacientes según su nivel de urgencia o necesidad médica. Esta categorización permite organizar mejor la atención y priorizar a quienes más lo requieren.
-  </p>
-</section>
+    <h2 class="mb-3">Bienvenido a la sección de Categorización Cliente</h2>
+    <p class="lead">
+      En esta sección podrás clasificar a los pacientes según su nivel de urgencia o necesidad médica.
+    </p>
+  </section>
 
-<section class="container my-5 text-center">
-  <div class="alert alert-secondary" role="alert">
-    <strong>Funcionalidad pendiente:</strong> Aquí irá el sistema de categorización de cliente.
-  </div>
-</section>
+  <section class="container my-5">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-4 mb-2">
+        <input type="text" id="buscador" class="form-control" placeholder="Buscar por nombre o RUT...">
+      </div>
+      <div class="col-md-4 mb-2">
+        <select id="filtroUrgencia" class="form-select">
+          <option value="">Filtrar por urgencia</option>
+          <option value="Verde">Verde</option>
+          <option value="Amarillo">Amarillo</option>
+          <option value="Rojo">Rojo</option>
+        </select>
+      </div>
+    </div>
 
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>RUT</th>
+            <th>Edad</th>
+            <th class="d-none d-md-table-cell">Sexo</th>
+            <th class="d-none d-md-table-cell">Temperatura</th>
+            <th class="d-none d-md-table-cell">Presión</th>
+            <th class="d-none d-md-table-cell">Oxígeno</th>
+            <th class="d-none d-md-table-cell">Pulsaciones</th>
+            <th class="d-none d-md-table-cell">Síntomas</th>
+            <th class="d-none d-md-table-cell">Urgencia</th>
+            <th class="d-md-none">Info</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPacientes"></tbody>
+      </table>
+    </div>
+  </section>
 
-    <!-- Footer -->
   <footer class="bg-danger text-white text-center py-4 mt-5 fixed-bottom">
     <p class="mb-0">&copy; 2025 Clínica INACAP. Todos los derechos reservados.</p>
-     <p class="mb-0"> Integrantes: Ignacio Larraín // Sara Vega</p>
+    <p class="mb-0">Integrantes: Ignacio Larraín // Sara Vega</p>
   </footer>
 
+  <script src="/js/clientes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
