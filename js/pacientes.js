@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // UNIÓN DE AMBOS ARREGLOS
   const pacientes = [...pacientesFijos, ...pacientesGuardados];
 
+  // ORDENAR POR URGENCIA: Grave > Moderada > Leve
+  pacientes.sort((a, b) => {
+    const prioridad = { "Grave": 1, "Moderada": 2, "Leve": 3 };
+    return prioridad[a.urgencia] - prioridad[b.urgencia];
+  });
+  
   // FUNCIÓN QUE MUESTRA LOS PACIENTES EN LA TABLA
   function renderPacientes(data) {
     tabla.innerHTML = "";
