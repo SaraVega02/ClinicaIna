@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // FUNCIÓN PARA FILTRAR PACIENTES POR TEXTO Y URGENCIA
   function filtrarPacientes() {
-    const texto = buscador?.value.toLowerCase() || "";
+    const texto = buscador.value.toLowerCase() || "";
     const urgenciaSeleccionada = filtro?.value || "";
 
     const filtrados = pacientes.filter(paciente => {

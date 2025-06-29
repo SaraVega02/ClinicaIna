@@ -1,16 +1,3 @@
-// ACTIVA FUNCIONES AL CARGAR HTML
-document.addEventListener("DOMContentLoaded", function () {
-  
-  // VINCULA ELEMENTO CON VALOR
-  const camposNumericos = [
-    { id: "edad", span: "edadValor" },
-    { id: "temperatura", span: "temperaturaValor" },
-    { id: "presionSistolica", span: "presionSistolicaValor" },
-    { id: "presionDiastolica", span: "presionDiastolicaValor" },
-    { id: "pulsaciones", span: "pulsacionesValor" },
-    { id: "oxigeno", span: "oxigenoValor" }
-  ];
-});
 
 // SE ENVÍA FORMULARIO
 document.getElementById('formPaciente').addEventListener('submit', function (e) {
