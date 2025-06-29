@@ -1,22 +1,66 @@
+/* ================================
+   GENERAL
+================================ */
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f8f9fa;
   padding-bottom: 100px;
 }
 
+h1, h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #b30000;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.alert {
+  font-size: 1.1rem;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.navbar-dark .nav-link {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .nav-link:hover {
+  color: #ffffff;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* ================================
+   CAROUSEL
+================================ */
+.carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-inner img {
   max-height: 500px;
   object-fit: contain;
-}
-
-.carousel {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-indicators [data-bs-target] {
@@ -35,30 +79,9 @@ body {
 }
 
 
-h1, h2 {
-  text-align: center;
-  margin-top: 2rem;
-  color: #b30000;
-}
-
-.navbar-brand {
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #ffffff !important;
-}
-
-.nav-link {
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #ffffff !important;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f1f1f1;
-}
-
+/* ================================
+   CARDS
+================================ */
 .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -73,20 +96,21 @@ h1, h2 {
   color: #b30000;
 }
 
-.lead {
-  font-size: 1.25rem;
-  color: #555;
-}
 
-.alert {
-  font-size: 1.1rem;
-}
-
+/* ================================
+   FOOTER
+================================ */
 footer {
   background-color: #b30000;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 
+/* ================================
+   TABLE SORTABLE
+================================ */
 th.sortable {
   cursor: pointer;
   user-select: none;
@@ -111,12 +135,16 @@ th.desc::after {
   color: black;
 }
 
+
+/* ================================
+   FORM VALIDATION
+================================ */
 .invalid-feedback {
   display: none;
   color: red;
+  font-size: 0.9rem;
 }
 
-input:invalid + .invalid-feedback,
-select:invalid + .invalid-feedback {
+.is-invalid + .invalid-feedback {
   display: block;
 }
