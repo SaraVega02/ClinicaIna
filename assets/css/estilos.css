@@ -3,7 +3,7 @@
 ================================ */
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding-bottom: 100px;
 }
 
@@ -15,7 +15,7 @@ h1, h2 {
 
 .lead {
   font-size: 1.25rem;
-  color: #555;
+  color: #555555;
 }
 
 .alert {
@@ -45,7 +45,7 @@ h1, h2 {
 }
 
 .dropdown-menu a:hover {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
 
 
@@ -122,7 +122,7 @@ th.sortable::after {
   font-size: 0.8em;
   position: absolute;
   right: 8px;
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 th.asc::after {
